@@ -40,7 +40,7 @@ function Details(props) {
       <img src={props.flag} width="250px" alt="National Flag"/>
       <h2>{props.name}</h2>
       <div className="more">
-          <span>Area: {props.area} sq. km</span>
+          <span>Area: {props.area} sq.km</span>
           <span>Region: {props.region}</span>
           <span>Native name: {props.native}</span>
           <span>Capital: {props.capital}</span>
@@ -59,34 +59,4 @@ export default App;
 
 
 
-// function User() {
-//   const [users, setUsers] = useState([]);
-//   useEffect(() => {
-//     fetch('https://jsonplaceholder.typicode.com/users')
-//       .then(res => res.json())
-//       .then(data => setUsers(data));
-//   }, []);
-//   return(
-//     <div>
-//       <h3>Dynamic Users</h3>
-//       {users.map(user => <li key={user.id}>{user.name}</li>)}
-//     </div>
-//   )
-// }
-// console.log(country)
-// console.log(country)
-
-// flag
-// name
-// native name
-// short name
-// phone code
-// capital
-// region
-// population
-// people
-// area
-// timezone
-// currency
-// language
 // 'https://restcountries.eu/rest/v2/name/bangladesh?fullText=true'

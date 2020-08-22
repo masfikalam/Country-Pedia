@@ -8,7 +8,8 @@ main {
     flex-wrap: wrap;
 }
 
-.input {
+
+/* .input {
     font-size: 20px;
     padding: 10px;
     border: none;
@@ -23,7 +24,7 @@ main {
     border-radius: 10px;
     cursor: pointer;
     background-color: antiquewhite;
-}
+} */
 
 .details {
     width: 400px;
@@ -49,4 +50,22 @@ main {
     font-size: 18px;
     display: block;
     margin: 7px 0;
+}
+
+@media (max-width: 450px) {
+    main {
+        justify-content: start;
+    }
+    .details {
+        width: 75%;
+        margin: 20px auto;
+    }
+    .details img {
+        width: 90%;
+    }
+    .details .more span {
+        font-size: 16px;
+        display: block;
+        margin: 5px 0;
+    }
 }
