@@ -10,6 +10,12 @@ function App() {
   }, []);
 
   return (
+    <>
+    <header>
+      <h1>Country Pedia</h1>
+      <h3>Nations Details</h3>
+    </header>
+    
     <main>
       {countries.map(country =>
       <Details
@@ -29,6 +35,11 @@ function App() {
        nativeLang={country.languages[0].nativeName}>
       </Details>)}
     </main>
+
+    <footer>
+      <h2>Developed by : <a href="https://fb.com/masfik.alam/" target="_blank">MASFIK</a></h2>
+    </footer>
+    </>
   );
 }
 
@@ -37,7 +48,7 @@ function App() {
 function Details(props) {
   return (
     <div className="details">
-      <img src={props.flag} width="250px" alt="National Flag"/>
+      <img src={props.flag} alt="National Flag"/>
       <h2>{props.name}</h2>
       <div className="more">
           <span>Area: {props.area} sq.km</span>

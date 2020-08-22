@@ -1,3 +1,24 @@
+header {
+    background-color: deeppink;
+    padding: 20px;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 44px;
+    margin: 0 30px;
+    filter: drop-shadow(0 0 5px black);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+header h3 {
+    margin: 0 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
 main {
     background-color: #0c162b;
     min-height: 100vh;
@@ -6,6 +27,19 @@ main {
     justify-content: space-around;
     color: white;
     flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: deeppink;
+    padding: 20px;
+    text-align: center;
+    color: #0c162b;
+}
+
+footer a {
+    color: 0c162b;
+    text-decoration: none;
 }
 
 
@@ -37,6 +71,7 @@ main {
 }
 
 .details img {
+    width: 250px;
     border-radius: 20px;
     border: 3px solid #000000;
 }
@@ -53,6 +88,12 @@ main {
 }
 
 @media (max-width: 450px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header h3 {
+        font-size: 20px;
+    }
     main {
         justify-content: start;
     }
@@ -67,5 +108,9 @@ main {
         font-size: 16px;
         display: block;
         margin: 5px 0;
+    }
+    footer {
+        padding: 10px;
+        font-size: 15px;
     }
 }
