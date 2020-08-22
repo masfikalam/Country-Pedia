@@ -1,14 +1,52 @@
-.App {
-    text-align: center;
-}
-
-.App-header {
+main {
     background-color: #0c162b;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    flex-direction: row;
+    justify-content: space-around;
     color: white;
+    flex-wrap: wrap;
+}
+
+.input {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit {
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.details {
+    width: 400px;
+    background-color: #25d3ff;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 20px;
+    color: #0c162b;
+    text-align: center;
+}
+
+.details img {
+    border-radius: 20px;
+    border: 3px solid #000000;
+}
+
+.details .more {
+    display: flex;
+    flex-direction: column;
+}
+
+.details .more span {
+    font-size: 18px;
+    display: block;
+    margin: 7px 0;
 }
