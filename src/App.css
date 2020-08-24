@@ -19,6 +19,14 @@ header h3 {
     text-align: center;
 }
 
+#total{
+    padding-top: 30px;
+    background-color: #0c162b;
+    margin: 0;
+    color: #25d3ff;
+    text-align: center;
+}
+
 main {
     background-color: #0c162b;
     min-height: 100vh;
@@ -34,57 +42,13 @@ footer {
     background-color: deeppink;
     padding: 20px;
     text-align: center;
-    color: #0c162b;
+    color: #2b100c;
 }
 
 footer a {
-    color: 0c162b;
+    color: #d9ff00;
     text-decoration: none;
-}
-
-
-/* .input {
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-}
-
-.submit {
-    font-size: 20px;
-    margin-left: 20px;
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: antiquewhite;
-} */
-
-.details {
-    width: 400px;
-    background-color: #25d3ff;
-    padding: 20px;
-    margin-top: 60px;
-    border-radius: 20px;
-    color: #0c162b;
-    text-align: center;
-}
-
-.details img {
-    width: 250px;
-    border-radius: 20px;
-    border: 3px solid #000000;
-}
-
-.details .more {
-    display: flex;
-    flex-direction: column;
-}
-
-.details .more span {
-    font-size: 18px;
-    display: block;
-    margin: 7px 0;
+    filter: drop-shadow(0 0 5px black);
 }
 
 @media (max-width: 450px) {
@@ -96,18 +60,6 @@ footer a {
     }
     main {
         justify-content: start;
-    }
-    .details {
-        width: 75%;
-        margin: 20px auto;
-    }
-    .details img {
-        width: 90%;
-    }
-    .details .more span {
-        font-size: 16px;
-        display: block;
-        margin: 5px 0;
     }
     footer {
         padding: 10px;
