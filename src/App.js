@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Countries from './Countries';
 import Details from './Details';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   // Getting country data
@@ -19,13 +21,21 @@ function App() {
     </header>
     
     <h4 id="total">Information of {countries.length} countries in a single page!</h4>
-
-    <main>
-      {countries.map(country =><Details key={country.alpha3Code} country={country}></Details>)}
-    </main>
+   
+    <Router>
+      <Route path="/" exact>
+        <main>
+          {countries.map(country =><Countries key={country.alpha3Code} country={country}></Countries>)}
+        </main>
+      </Route>
+      <Route path="/:countryName">
+        <Details></Details>
+      </Route>
+    </Router>
+    
 
     <footer>
-      <h2>Developed by : <a href="https://fb.com/masfik.alam/">MASFIK</a></h2>
+      <h3>Developed by : <a href="https://fb.com/masfik.alam/">MASFIK</a></h3>
     </footer>
     </>
   );
