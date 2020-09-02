@@ -22,6 +22,9 @@ section#details {
     display: block;
     margin: 7px 0;
 }
+h2.loading{
+    text-align: center;
+}
 @media (max-width: 450px) {
     #details .more span {
         font-size: 16px;
