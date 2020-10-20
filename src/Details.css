@@ -1,12 +1,14 @@
 section#details {
     background-color: #0c162b;
     color: white;
-    text-align: center;
-    padding-bottom: 40px;
+    min-height: 65vh;
 }
-#details .more {
+#details .flex {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+}
+#details h3 span {
+    color: #ff67b8;
 }
 #details img {
     width: 250px;
@@ -17,18 +19,17 @@ section#details {
     padding-bottom: 20px;
     margin: 0;
 }
-#details .more span {
-    font-size: 18px;
-    display: block;
-    margin: 7px 0;
-}
 h2.loading{
+    margin-top: 0;
+    padding-top: 80px;
     text-align: center;
 }
-@media (max-width: 450px) {
-    #details .more span {
-        font-size: 16px;
-        display: block;
-        margin: 5px 0;
+@media (max-width: 900px) {
+    #details h2.name{
+        text-align: center;
+    }
+    #details .flex {
+        flex-direction: column;
+        align-items: center;
     }
 }

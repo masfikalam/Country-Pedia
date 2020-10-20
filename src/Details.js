@@ -3,40 +3,48 @@ import './Details.css'
 import { useParams } from 'react-router-dom';
 
 const Details = () => {
-    // fetching country data
     const {countryName} = useParams();
-    const [country, setCountry] = useState([]);
+    const [country, setCountry] = useState({});
+
+    // fetching country data
     useEffect(() => {
         fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
         .then(res => res.json())
-        .then(data => setCountry(data))
+        .then(data => setCountry(data[0]))
     }, [countryName]);
     
     // All country details
-    if (country[0]){
-        const {flag, name, area, region, nativeName, capital, callingCodes, demonym, population, timezones, currencies, languages} = country[0];
+    const {flag, name, area, region, nativeName, capital, callingCodes, demonym, population, timezones, currencies, languages} = country;
 
-        return (
-            <section id="details">
-                <h2 className="name">{name}</h2>
-                <img src={flag} alt="National Flag"/>
-                <div className="more">
-                <span>Area: {area} sq.km</span>
-                <span>Region: {region}</span>
-                <span>Native name: {nativeName}</span>
-                <span>Capital: {capital}</span>
-                <span>Phone Code: {callingCodes[0]}</span>
-                <span>People: {demonym}</span>
-                <span>Population: {(population).toLocaleString()}</span>
-                <span>Timezone: {timezones[0]}</span>
-                <span>Currency: {currencies[0].code} ({currencies[0].name})</span>
-                <span>Language: {languages[0].name} ({languages[0].nativeName})</span>
-                </div>
-            </section>
-        )
-    } else {
-        return <h2 className="loading">Loading...</h2>
-    }
+    return (
+        <section id="details">
+            {
+                country.timezones ? 
+                <div className="flex">
+                    <div className="one">
+                        <h2 className="name">{name}</h2>
+                        <img src={flag} alt="National Flag"/>
+                    </div>
+                    <div className="two">
+                        <h3>Native name: <span>{nativeName}</span></h3>
+                        <h3>Capital: <span>{capital}</span></h3>
+                        <h3>Area: <span>{area} sq.km</span></h3>
+                        <h3>Region: <span>{region}</span></h3>
+                        <h3>Timezone: <span>{timezones[0]}</span></h3>
+                    </div>
+                    <div className="more">
+                        <h3>People: <span>{demonym}</span></h3>
+                        <h3>Population: <span>{(population).toLocaleString()}</span></h3>
+                        <h3>Phone Code: <span>{callingCodes[0]}</span></h3>
+                        <h3>Currency: <span>{currencies[0].code} ({currencies[0].name})</span>
+                        </h3>
+                        <h3>Language: <span>{languages[0].name} ({languages[0].nativeName})</span></h3>
+                    </div>
+                </div> :
+                <h2 className="loading">Loading...</h2>
+            }
+        </section>
+    )
 }
 
 export default Details;

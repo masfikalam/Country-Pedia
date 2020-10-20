@@ -14,30 +14,29 @@ function App() {
   }, []);
 
   return (
-    <>
-    <header>
-      <h1>Country Pedia</h1>
-      <h3>Nations Details</h3>
-    </header>
+    <main>
+      <header>
+        <h1>Country Pedia</h1>
+        <h3>Nations Details</h3>
+      </header>
+      
+      <h4 id="total">Information of {countries.length} countries in a single page!</h4>
     
-    <h4 id="total">Information of {countries.length} countries in a single page!</h4>
-   
-    <Router>
-      <Route path="/" exact>
-        <main>
-          {countries.map(country =><Countries key={country.alpha3Code} country={country}></Countries>)}
-        </main>
-      </Route>
-      <Route path="/:countryName">
-        <Details></Details>
-      </Route>
-    </Router>
-    
-
-    <footer>
-      <h3>Developed by : <a href="https://fb.com/masfik.alam/">MASFIK</a></h3>
-    </footer>
-    </>
+      <Router>
+        <Route path="/" exact>
+          <section id="main">
+            {countries.map(country =><Countries key={country.alpha3Code} country={country}></Countries>)}
+          </section>
+        </Route>
+        <Route path="/:countryName">
+          <Details></Details>
+        </Route>
+      </Router>
+  
+      <footer>
+        <h3>Developed by : <a href="https://fb.com/masfik.alam/">MASFIK</a></h3>
+      </footer>
+    </main>
   );
 }
 

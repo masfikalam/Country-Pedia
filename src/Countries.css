@@ -1,20 +1,24 @@
-.details {
+.country {
     width: 450px;
+    padding: 8px 0;
     background-color: #25d3ff;
     margin-top: 40px;
     border-radius: 20px;
     color: #0c162b;
     text-align: center;
 }
-.details .country-name {
+.country .country-name {
     color: #0c162b;
 }
-.details .what {
+.link {
     text-decoration: none;
 }
 @media (max-width: 450px) {
-    .details {
+    .link {
         width: 90%;
+    }
+    .country {
+        width: 100%;
         margin: 10px auto;
     }
 }
