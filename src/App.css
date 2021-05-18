@@ -1,5 +1,6 @@
 /* whole application */
 main {
+  background-color: #0c162b;
   min-height: 100vh;
 }
 
@@ -22,7 +23,7 @@ header h1 {
   margin: 0 30px;
   color: white;
 }
-h4#total {
+h4.total {
   background-color: #0c162b;
   text-align: center;
   color: #25d3ff;
@@ -30,11 +31,28 @@ h4#total {
   min-height: 1vh;
   margin: 0;
 }
+.search-box {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 450px;
+  width: 85%;
+}
+.search-box input {
+  border: 2px solid #25d3ff;
+  background-color: #0c162b;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  color: #fff;
+  height: 30px;
+  width: 90%;
+}
 
 /* main section */
 section#all-countries {
   justify-content: space-around;
-  background-color: #0c162b;
   flex-direction: row;
   min-height: 80vh;
   flex-wrap: wrap;
@@ -51,6 +69,7 @@ section#all-countries {
   color: #0c162b;
   cursor: pointer;
   margin: 15px 0;
+  height: 100%;
   width: 430px;
 }
 .country:active {
@@ -82,18 +101,18 @@ section#details {
   flex-direction: column;
 }
 #details .photo {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 #details h2.name {
-  margin: 0;
   padding-bottom: 20px;
+  margin: 0;
 }
 #details .flex-2 {
-  margin: 20px 0;
-  width: 100%;
-  display: flex;
   justify-content: space-around;
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
 }
 #details h3 span {
   color: #ff67b8;

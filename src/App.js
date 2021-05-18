@@ -4,6 +4,7 @@ import "./App.css";
 import AllCountries from "./components/all_countries";
 import Country from "./components/country_details";
 import FooterPart from "./components/footer_part";
+import SearchBox from "./components/search_box";
 
 // modal styles
 Modal.setAppElement("#root");
@@ -25,6 +26,7 @@ function App() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [countries, setCountries] = useState([]);
   const [selected, setSelected] = useState({});
+  const [term, setTerm] = useState("");
 
   // Loading country data
   useEffect(() => {
@@ -48,10 +50,18 @@ function App() {
       </header>
 
       {countries.length > 0 && (
-        <h4 id="total">{countries.length} countries in a single page!</h4>
+        <h4 className="total">
+          {countries.length} countries in a single page!
+        </h4>
       )}
 
-      <AllCountries countries={countries} showDetails={showDetails} />
+      <SearchBox setTerm={setTerm} />
+
+      <AllCountries
+        countries={countries}
+        showDetails={showDetails}
+        term={term}
+      />
 
       <Modal
         isOpen={modalIsOpen}
