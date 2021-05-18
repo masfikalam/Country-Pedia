@@ -1,76 +1,160 @@
+/* whole application */
 main {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
-header {
-    background-color: deeppink;
-    padding: 20px;
+/* header */
+header,
+footer {
+  background-color: deeppink;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  display: flex;
 }
 
 header h1 {
-    font-family: 'Lobster', cursive;
-    color: white;
-    font-size: 44px;
-    margin: 0 30px;
-    filter: drop-shadow(0 0 5px black);
-    letter-spacing: 2px;
-    text-align: center;
+  filter: drop-shadow(0 0 5px black);
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 44px;
+  margin: 0 30px;
+  color: white;
+}
+h4#total {
+  background-color: #0c162b;
+  text-align: center;
+  color: #25d3ff;
+  padding: 20px 0;
+  min-height: 1vh;
+  margin: 0;
 }
 
-header h3 {
-    margin: 0 30px;
-    font-size: 22px;
-    text-align: center;
+/* main section */
+section#all-countries {
+  justify-content: space-around;
+  background-color: #0c162b;
+  flex-direction: row;
+  min-height: 80vh;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  color: white;
+  display: flex;
 }
 
-#total{
-    padding: 30px;
-    background-color: #0c162b;
-    margin: 0;
-    color: #25d3ff;
-    text-align: center;
+/* all country name */
+.country {
+  background-color: #25d3ff;
+  border-radius: 10px;
+  text-align: center;
+  color: #0c162b;
+  cursor: pointer;
+  margin: 15px 0;
+  width: 430px;
+}
+.country:active {
+  transform: scale(0.95);
+}
+.country .country-name {
+  color: #0c162b;
 }
 
-section#main {
-    background-color: #0c162b;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
+/* modal background */
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: #000000a1 !important;
+}
+.ReactModal__Content.ReactModal__Content--after-open {
+  background-color: transparent !important;
+  border: none !important;
 }
 
-footer {
-    background-color: deeppink;
-    padding: 20px;
-    text-align: center;
-    color: #2b100c;
+/* details modal */
+section#details {
+  color: white;
+  border-radius: 10px;
+  background-color: #0c162b;
+  border: 3px solid #25d3ff;
+}
+#details .flex-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#details .photo {
+  margin-top: 20px;
+  text-align: center;
+}
+#details h2.name {
+  margin: 0;
+  padding-bottom: 20px;
+}
+#details .flex-2 {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#details h3 span {
+  color: #ff67b8;
+}
+#details img {
+  width: 250px;
+  border-radius: 20px;
+  border: 3px solid #000000;
+}
+#details .close {
+  background-color: #25d3ff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+#details .close:active {
+  transform: scale(0.95);
 }
 
+/* footer area */
 footer h3 {
-    margin: 0;
+  color: #0c162b;
+  margin: 0;
 }
-
 footer a {
-    color: #d9ff00;
-    text-decoration: none;
-    filter: drop-shadow(0 0 5px black);
+  text-decoration: none;
+  color: #fff;
 }
 
+/* media queries */
+@media (max-width: 650px) {
+  #details .flex-2 {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 @media (max-width: 450px) {
-    header h1 {
-        font-size: 30px;
-    }
-    header h3 {
-        font-size: 20px;
-    }
-    main {
-        justify-content: start;
-    }
-    footer {
-        padding: 10px;
-        font-size: 15px;
-    }
+  main {
+    justify-content: start;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  .link {
+    width: 90%;
+  }
+  .country {
+    width: 90%;
+    margin: 10px auto;
+  }
+  #details {
+    transform: scale(0.8);
+  }
+  footer {
+    font-size: 15px;
+    padding: 10px;
+  }
 }
