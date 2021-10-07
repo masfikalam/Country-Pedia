@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
+
 /* whole application */
+body {
+  margin: 0;
+}
 main {
   background-color: #0c162b;
   min-height: 100vh;
@@ -16,7 +21,7 @@ footer {
 
 header h1 {
   filter: drop-shadow(0 0 5px black);
-  font-family: "Lobster", cursive;
+  font-family: "Lobster Two", cursive;
   letter-spacing: 2px;
   text-align: center;
   font-size: 44px;
